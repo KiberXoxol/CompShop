@@ -1,0 +1,126 @@
+﻿<Window x:Class="ComputerShop.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComputerShop"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Магазин" Height="800" Width="1000">
+    <Grid>
+        <Grid Background="#F2F2EF">
+
+            <!--Создание панели категорий-->
+            <Border Style="{StaticResource BorderStyle}" HorizontalAlignment="Left" Margin="60 0 0 0">
+                <Grid>
+                    <!--Процессоры-->
+                    <Border Style="{StaticResource CategoryBorder}" VerticalAlignment="Top">
+                        <Grid Margin="0 0 0 0">
+                            <Button x:Name="ПРОЦЕССОР" Content="Процессоры" Style="{StaticResource CategoryButton}" Click="CallCardGenerator" />
+                        </Grid>
+                    </Border>
+
+                    <!--Материнские платы-->
+                    <Border Style="{StaticResource CategoryBorder}" VerticalAlignment="Top" Margin="0 51 0 0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="18*"/>
+                                <ColumnDefinition Width="7*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="ПЛАТЫ" Style="{StaticResource CategoryButton}" Content="Материнские платы" Click="CallCardGenerator" Grid.ColumnSpan="2" />
+                        </Grid>
+                    </Border>
+
+                    <!--Видеокарты-->
+                    <Border Style="{StaticResource CategoryBorder}" VerticalAlignment="Top" Margin="0 102 0 0">
+                        <Grid>
+                            <Button x:Name="ВИДЕОКАРТА" Style="{StaticResource CategoryButton}" Content="Видеокарты" Click="CallCardGenerator"/>
+                        </Grid>
+                    </Border>
+
+                    <!--Оперативная память-->
+                    <Border Style="{StaticResource CategoryBorder}" VerticalAlignment="Top" Margin="0 153 0 0">
+                        <Grid>
+                            <Button x:Name="ОЗУ" Style="{StaticResource CategoryButton}" Content="Оперативная память" Click="CallCardGenerator"/>
+                        </Grid>
+                    </Border>
+
+                    <!--Корпуса-->
+                    <Border Style="{StaticResource CategoryBorder}" VerticalAlignment="Top" Margin="0 204 0 0">
+                        <Grid>
+                            <Button x:Name="КОРПУС" Style="{StaticResource CategoryButton}" Content="Корпуса" Click="CallCardGenerator" />
+                        </Grid>
+                    </Border>
+
+                    <!--Блоки питания-->
+                    <Border Style="{StaticResource CategoryBorder}" VerticalAlignment="Top" Margin="0 256 0 0">
+                        <Grid>
+                            <Button x:Name="БП" Style="{StaticResource CategoryButton}" Content="Блоки питания" Click="CallCardGenerator"/>
+                        </Grid>
+                    </Border>
+
+                    <!--Системы охлаждения-->
+                    <Border Style="{StaticResource CategoryBorder}" VerticalAlignment="Top" Margin="0 307 0 0">
+                        <Grid>
+                            <Button x:Name="ОХЛАЖДЕНИЕ" Style="{StaticResource CategoryButton}" Content="Системы охлаждения" Click="CallCardGenerator"/>
+                        </Grid>
+                    </Border>
+
+                    <!--Накопители-->
+                    <Border Style="{StaticResource CategoryBorder}" VerticalAlignment="Top" Margin="0 358 0 0">
+                        <Grid>
+                            <Button x:Name="НАКОПИТЕЛИ" Style="{StaticResource CategoryButton}" Content="Накопители" Click="CallCardGenerator" />
+                        </Grid>
+                    </Border>
+
+                    <!--Переферия-->
+                    <Border Style="{StaticResource CategoryBorder}" VerticalAlignment="Top" Margin="0 409 0 0">
+                        <Grid>
+                            <Button x:Name="ПЕРЕФЕРИЯ" Style="{StaticResource CategoryButton}" Content="Переферия" Click="CallCardGenerator"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+
+            <!--Создание поисковой строки-->
+            <Border Style="{StaticResource SearchBarBorder}" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="80 50 0 0">
+                <Grid>
+                    <TextBlock Style="{StaticResource SearchBarTextBlock}" Text="Поиск по каталогу"/>
+                    <TextBox Style="{StaticResource SearchBar}"/>
+                </Grid>
+            </Border>
+
+            <!--Создание панели с товарами-->
+            <Border Style="{StaticResource ProductBorderStyle}" Margin="80 20 0 0">
+                <Grid x:Name="ProductGrid">
+
+                </Grid>
+            </Border>
+
+            <!--Создание панели с доп кнопками-->
+            <Border Style="{StaticResource AddButtonsBorderStyle}" Margin="0 60 100 0">
+                <Grid>
+                    <Border>
+                        <Grid VerticalAlignment="Bottom">
+                            <TextBlock Style="{StaticResource AddButtonsTextBlockStyle}" Text="Корзина"/>
+                            <Button Style="{StaticResource AddButtonsStyle}"/>
+                        </Grid>
+                    </Border>
+
+                    <Border>
+                        <Grid VerticalAlignment="Center" Margin="0 0 0 40">
+                            <TextBlock Style="{StaticResource AddButtonsTextBlockStyle}" Text="Аккаунт"/>
+                            <Button Style="{StaticResource AddButtonsStyle}"/>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <!--Декоративные элементы-->
+            <Border Background="Black" Width="2" Height="580" HorizontalAlignment="Left" Margin="285 0 0 120"/>
+            <Border Background="Black" Width="2" Height="580" HorizontalAlignment="Right" Margin="0 0 205 120"/>
+            <Border Background="#759242" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="85" CornerRadius="10" Margin="60 50 0 0">
+                <TextBlock Text="Лого" FontSize="64" TextAlignment="Center"/>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>
